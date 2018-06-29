@@ -1,0 +1,41 @@
+<div class="layout-container">
+  <section class="mb4" layout="column" layout-align="start center">
+    <h1 class="f1 tc">Spotify</h1>
+    <md-button target="_blank" ng-if="$ctrl.userAccounts" ng-href="create-new-integration/" class="md-accent md-raised" layout="row">
+      Add Account</md-button>
+  </section>
+
+  <section layout="column" layout-align="start center">
+    <md-list class="mw7 w-100" ng-if="$ctrl.userAccounts">
+      <md-list-item ng-repeat="account in $ctrl.userAccounts track by $index">
+        <md-card class="w-100 has-hidden-action-buttons">
+          <md-content class="pa3" layout="row" layout-align="space-between center" ng-if="account.app_authenticated">
+            <a class="mb0" ui-sref="accountSettings({ accountId: account.id })">
+              <h3 class="f3 mb2">{{ ::account.handle }}</h3>
+              <div><b>YellowAnt Invoke Name:</b> {{ ::account.user_invoke_name }}</div>
+              <!--<div ng-if="!account.is_valid" class="mw7 w-100">-->
+               <!--<div md-colors="::{ color: 'accent'}"><b>INTEGRATE</b> this account with Spotify </div>-->
+               <!--</div>-->
+
+            </a>
+
+            <a ng-if="account.app_authenticated" md-button class="md-primary md-raised hidden-action-buttons" ng-click="$ctrl.onDeleteAccount(account)">Delete</a>
+            <!--<a ng-if="account.app_authenticated" md-button class="md-primary md-raised hidden-action-buttons" ui-sref="accountSettings({accountId: account.id})">View</a>-->
+          <!--</md-content>-->
+          <!--<md-content class="pa3" layout="row" layout-align="space-between center" ng-if="!account.app_authenticated">-->
+            <!--<div class="mb0">-->
+              <!--<h3 class="f3 mb2" md-colors="::{ color: 'accent'}">Awsec2 Account Not Integrated</h3>-->
+
+              <!--<div><b>YellowAnt Invoke Name:</b> {{ ::account.user_invoke_name }}</div>-->
+            <!--</div>-->
+            <!--<a ng-if="!account.app_authenticated" md-button class="md-primary md-raised hidden-action-buttons" ng-click="$ctrl.onDeleteAccount(account)">Delete</a>-->
+
+            <!--<a md-button class="md-accent md-raised hidden-action-buttons" target="_blank" ng-href="{{'integrate_app/?id=' + account.id }}">Integrate</a>-->
+          <!--</md-content>-->
+        </md-card>
+      </md-list-item>
+    </md-list>
+
+  </section>
+
+</div>

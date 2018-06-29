@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block base %}<base href="{{base_href}}">{% endblock %}
+{% block content %}
+
+
+<script>
+  var djangoConstants ={
+    csrftoken: '{{ csrf_token }}',
+    base_href :"/",
+    application_id: '{{ application_id }}',
+  };
+</script>
+ {% comment %} {% if user.is_authenticated %}
+  <h3>Hi {{ user.username }}!</h3>
+
+  {% if user_integrations %}
+    <table>
+      <thead><tr>
+        <td>Team Subdomain</td>
+        <td>Integration ID</td>
+        <td>Invoke Name</td>
+      </tr></thead>
+      <tbody>
+        {% for user_integration in user_integrations %}
+        <tr>
+          <td>{{ user_integration.yellowant_user_id }}</td>
+          <td>{{ user_integration.yellowant_integration_id }}</td>
+          <td>{{ user_integration.yellowant_integration_invoke_name }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <div>You don't have any integrations yet.</div>
+  {% endif %}
+
+  <p><a href="getyellowantauthurl/"><button>Create New Integration</button></a></p>
+
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %} {% endcomment %}
+
+<div ng-app="awsec2-app"><yellowant-awsec2-app></yellowant-awsec2-app>
+  <script src="https://s3.amazonaws.com/ya-stage-common/angular-static/angular.js/1.6.4/angular.min.js"></script>
+
+  <script src="https://s3.amazonaws.com/ya-stage-common/angular-static/angular.js/1.6.4/angular-animate.min.js"></script>
+
+  <script src="https://s3.amazonaws.com/ya-stage-common/angular-static/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+
+  <script src="https://s3.amazonaws.com/ya-stage-common/angular-static/angular-material/1.1.4/angular-material.min.js"></script>
+
+  <script src="https://s3.amazonaws.com/ya-stage-common/angular-static/angular.js/1.6.4/angular-messages.min.js"></script>
+
+  <script src="https://s3.amazonaws.com/ya-stage-common/angular-static/angular.js/1.6.4/angular-aria.min.js"></script>
+
+
+
+
+  <script src="http://localhost:3011/bundle/main.js"></script>
+
+</div>
+
+
+{% endblock %}

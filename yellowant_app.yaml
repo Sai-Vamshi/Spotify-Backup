@@ -1,0 +1,49 @@
+api_url: https://4491de00.ngrok.io/yellowant-api/
+creator_email: saivamshipavan@gmail.com
+documentation_url: www.yellowant.com/documentation
+functions:
+  new-releases:
+    function_type: 1
+    input_args: {}
+    invoke_name: new-releases
+    is_active: 1
+    max_retries: 0
+    name: New Releases
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Shows all the New Releases
+    user_rate_limit: 0.0
+  search:
+    function_type: 1
+    input_args:
+      input:
+        arg_type: 14
+        description: The input keyword
+        example: Maroon 5
+        name: input
+        required: 1
+    invoke_name: search
+    is_active: 1
+    max_retries: 0
+    name: Search
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: To get songs related to a particular keyword
+    user_rate_limit: 0.0
+icon_url: www.yellowant.com
+install_page_url: www.yellowant.com
+invoke_name: spotify
+is_active: 1
+is_production_or_sandbox: 0
+long_description: ''
+name: Spotify
+privacy_policy_url: www.yellowant.com/privacy
+rate_limit: 0.0
+rate_limited: 0
+redirect_uris: https://4491de00.ngrok.io/yellowant-oauth-redirect/
+short_description: The Music App
+user_rate_limit: 0.0
+visibility_scope: 0
+website: www.yellowant.com
