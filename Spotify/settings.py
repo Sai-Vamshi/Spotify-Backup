@@ -58,7 +58,7 @@ SPOTIFY_REDIRECT_URL = BASE_URL + "yellowantredirecturl/"
 
 
 # # Numerical ID generated when you register your application through the YA developer console
-# YA_APP_ID = os.environ.get("YA_APP_ID", 1935)
+YA_APP_ID = os.environ.get("YA_APP_ID", 1935)
 # # Client ID generated from the YA developer console. Required to identify
 # # requests from this application to YA
 # YA_CLIENT_ID = os.environ.get("YA_CLIENT_ID", "w5r4cY8PTA3i3Gm68PzxkMJfLfuwSQdgK7b78lyJ")
