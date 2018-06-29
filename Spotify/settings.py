@@ -84,7 +84,7 @@ SECRET_KEY = '%%rf5n!99s^ue309_(r+3j)iqm^^cno5k^o4=@$pvaq@l=iw5p'
 DEBUG = True
 
 # SECURITY WARNING: remove wildcard condition from ALLOWED_HOSTS
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*", '{}.herokuapp.com'.format(app_name)]
 
 
 # Application definition
