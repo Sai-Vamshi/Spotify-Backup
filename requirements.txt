@@ -15,7 +15,7 @@ oauthlib==2.0.2
 pyaml==17.12.1
 python-dateutil==2.6.1
 pytz==2018.4
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.1
 requests-oauthlib==0.8.0
 s3transfer==0.1.10
